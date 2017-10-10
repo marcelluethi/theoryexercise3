@@ -41,7 +41,7 @@ public class StackFunctionalTest {
         StackFunctional.Stack<String> emptyStack = StackFunctional.create();
 
         assertEquals("popping an element from a stack should result in the last pushed element", "foo",
-                StackFunctional.pop(StackFunctional.push(emptyStack, "foo")).second);
+                StackFunctional.pop(StackFunctional.push(emptyStack, "foox")).second);
     }
 
 
