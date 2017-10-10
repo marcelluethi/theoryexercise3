@@ -1,4 +1,4 @@
-package functional;
+package adts.functional;
 
 /**
  * Implementation from https://alvinalexander.com/java/java-tuple-classes

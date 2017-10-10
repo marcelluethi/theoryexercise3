@@ -1,4 +1,4 @@
-package oo;
+package adts.oo;
 
 import org.junit.Test;
 
@@ -28,6 +28,14 @@ public class StackOOTest {
         stackPushPopped.pop();
 
         assertEquals("pushing and popping an element from a stack should result in the same stack", stack, stackPushPopped );
+    }
+
+
+    @Test
+    public void topYieldsTheLastPushedElement() {
+        StackOO stack = new StackOO() ;
+        stack.push("foo");
+        assertEquals("top yields the last pushed Element", "foo", stack.pop());
     }
 
     @Test

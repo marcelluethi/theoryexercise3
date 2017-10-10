@@ -1,6 +1,5 @@
-package imperative;
+package adts.imperative;
 
-import oo.StackOO;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,6 +19,14 @@ public class StackImperativeTest {
         assertEquals("an empty stack should be empty", true, StackImperative.empty(stackRepr));
     }
 
+
+    @Test
+    public void topYieldsTheLastPushedElement() {
+        StackImperative.StackRepr stackRepr = StackImperative.stackCreate() ;
+        StackImperative.stackPush(stackRepr, "foo");
+        assertEquals("top yields the last pushed Element", "foo",
+                StackImperative.stackTop(stackRepr));
+    }
 
     @Test
     public void pushAndPopYieldsSameStack() {
