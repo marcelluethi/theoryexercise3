@@ -1,6 +1,10 @@
 language: java
+
 jdk:
   - oraclejdk8          // tells Travis to use Java 8
+
+before_install:
+ - cd ganttproject-builder; chmod +x gradlew
 
 script:
 - "./gradlew clean build test"
