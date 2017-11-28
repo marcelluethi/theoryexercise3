@@ -16,13 +16,13 @@ public class StackFunctional {
             this.data = l;
         }
 
-        Stack immutableAppend(E element) {
+        private Stack immutableAppend(E element) {
             LinkedList<E> newList = (LinkedList<E>) data.clone();
             newList.add(element);
             return new Stack(newList);
         }
 
-        Stack immutableRemoveLast() {
+        private Stack immutableRemoveLast() {
             LinkedList<E> newData = (LinkedList<E>) data.clone();
             newData.remove(newData.getLast());
             return new Stack(newData);
