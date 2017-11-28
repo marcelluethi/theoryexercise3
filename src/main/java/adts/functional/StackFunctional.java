@@ -53,7 +53,7 @@ public class StackFunctional {
     }
 
     public static <E> Tuple<Stack, E> pop(Stack<E> repr) {
-        return new Tuple(repr.immutableRemoveLast(), repr.data.getLast());
+        return new Tuple<Stack, E>(repr.immutableRemoveLast(), repr.data.getLast());
     }
 
     public static <E> boolean empty(Stack<E> repr) {

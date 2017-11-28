@@ -61,4 +61,10 @@ public class StackFunctionalTest {
 
     }
 
+    @Test
+    public void equalsAreEqual() {
+        StackFunctional.Stack<String> s = createOneElementStack();
+        assertEquals(s, s);
+
+    }
 }

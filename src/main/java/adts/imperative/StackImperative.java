@@ -26,8 +26,7 @@ class StackImperative {
         @Override
         public int hashCode() {
 
-            int result = (data != null ? data.hashCode() : 0);
-            return result;
+            return (data != null ? data.hashCode() : 0);
         }
     }
 
